@@ -1,0 +1,1 @@
+﻿insert into Faculty_Details(First_Name,Middle_Name,Last_Name,UIN,Gender,Phone,Qualification,Email,Address,Department,Subject,Experiance,Experiance_Year,Original_Document_Checked,PayScale,Salary) values('ghgh','ghhj','hjg',6755,'hjhkhj',676876,'hhj','bbhjk','hjgjhg','hjgjg','jkl','gh','6gg','gfhf',6767867,678678)

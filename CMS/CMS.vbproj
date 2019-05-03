@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78B26C56-5295-4CBF-A359-FB6E2827E48D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CMS.My.MyApplication</StartupObject>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="common_variables.vb" />
+    <Compile Include="db.vb" />
+    <Compile Include="Form_Administrative.Designer.vb">
+      <DependentUpon>Form_Administrative.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Administrative.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admission.Designer.vb">
+      <DependentUpon>Form_Admission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Admission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Finance.Designer.vb">
+      <DependentUpon>Form_Finance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Finance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HumanResource.Designer.vb">
+      <DependentUpon>Form_HumanResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HumanResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Library.Designer.vb">
+      <DependentUpon>Form_Library.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Library.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.vb">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Start.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Start.Designer.vb">
+      <DependentUpon>Form_Start.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\CrystalReportAdmission.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportAdmission.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportFinance_Salary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportFinance_Salary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportHumanResource.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHumanResource.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportLibraryBooks.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLibraryBooks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportLibraryMembarEmployee.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLibraryMembarEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportLibraryMembarStudent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLibraryMembarStudent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportPendingBook.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPendingBook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportPndingBookEmployee.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPndingBookEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportStudentFees.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportStudentFees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form_Admission.Designer.vb">
+      <DependentUpon>Report_Form_Admission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_Admission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_Finance_Fees.Designer.vb">
+      <DependentUpon>Report_Form_Finance_Fees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_Finance_Fees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_Finance_Salary.Designer.vb">
+      <DependentUpon>Report_Form_Finance_Salary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_Finance_Salary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_HumanResource.Designer.vb">
+      <DependentUpon>Report_Form_HumanResource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_HumanResource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_LibraryBooks.Designer.vb">
+      <DependentUpon>Report_Form_LibraryBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_LibraryBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_LibraryMembar.Designer.vb">
+      <DependentUpon>Report_Form_LibraryMembar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_LibraryMembar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form_LibraryPendingBooks.Designer.vb">
+      <DependentUpon>Report_Form_LibraryPendingBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form_LibraryPendingBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_Administrative.resx">
+      <DependentUpon>Form_Administrative.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admission.resx">
+      <DependentUpon>Form_Admission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Finance.resx">
+      <DependentUpon>Form_Finance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HumanResource.resx">
+      <DependentUpon>Form_HumanResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Library.resx">
+      <DependentUpon>Form_Library.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Start.resx">
+      <DependentUpon>Form_Start.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportAdmission.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportAdmission.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportFinance_Salary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportFinance_Salary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportHumanResource.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHumanResource.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportLibraryBooks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLibraryBooks.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportLibraryMembarEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLibraryMembarEmployee.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportLibraryMembarStudent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLibraryMembarStudent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportPendingBook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPendingBook.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportPndingBookEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPndingBookEmployee.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportStudentFees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportStudentFees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_Admission.resx">
+      <DependentUpon>Report_Form_Admission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_Finance_Fees.resx">
+      <DependentUpon>Report_Form_Finance_Fees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_Finance_Salary.resx">
+      <DependentUpon>Report_Form_Finance_Salary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_HumanResource.resx">
+      <DependentUpon>Report_Form_HumanResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_LibraryBooks.resx">
+      <DependentUpon>Report_Form_LibraryBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_LibraryMembar.resx">
+      <DependentUpon>Report_Form_LibraryMembar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form_LibraryPendingBooks.resx">
+      <DependentUpon>Report_Form_LibraryPendingBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Form2.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-management-system-C-.net-Project-with-source-code.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student-management-system-C-.net-Project-with-source-code1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_2192%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admission.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_10_2018-library_18566382.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entypo_d83d%280%29_10241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f007%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconic_e062%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontAwesome_f023%281%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\et-line_e040%280%29_1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\et-line_e040%280%29_10241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\et-line_e040%280%29_10242.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

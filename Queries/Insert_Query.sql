@@ -1,0 +1,1 @@
+﻿insert into Emp_Details(First_Name,Middle_Name,Last_Name,UIN,Gender,Phone,Qualification,Email,Address,Experiance,Experiance_Year,Pay_Scale,Salary) values('sdf','dsfa','adsf',685,'dsf',897896,'dsf','sdfa','sdfdasf','dsf','dafs',4,2545);
